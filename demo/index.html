@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" data-main="js/main.js" src="../src/vendor/requirejs/require.js"></script>
+</head>
+<body>
+    <form action="/" method="post">
+        <fieldset>
+            <legend>Autosuggest</legend>
+            <div class="form-group">
+                <label for="autosuggest">Search</label>
+                <input type="text" class="form-control" name="query" id="autosuggest">
+            </div>
+        </fieldset>
+    </form>
+
+    <script type="text/js-template" id="options-tpl">
+
+    </script>
+    <script type="text/js-template" id="option-tpl">
+        <%= nid %>: <%= title %>
+    </script>
+</body>
+</html>
