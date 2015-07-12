@@ -25,6 +25,8 @@ define(
         Options = Backbone.View.extend({
             tagName: 'ol',
 
+            className: 'option-list',
+
             initialize: function (options) {
                 this.state = options.state;
                 this.template = options.template;
