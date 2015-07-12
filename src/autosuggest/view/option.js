@@ -19,6 +19,8 @@ define(
         Option = Backbone.View.extend({
             tagName: 'li',
 
+            className: 'option-list__item',
+
             events: {
                 'click': 'onClick'
             },
