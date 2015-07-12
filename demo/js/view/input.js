@@ -18,7 +18,8 @@ define(
 
         Input = Base.extend({
             events: {
-                'keyup': 'setKeyword'
+                'keyup': 'onChange',
+                'focus': 'onFocus'
             }
         });
 

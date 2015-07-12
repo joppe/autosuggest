@@ -1,0 +1,14 @@
+.option-list {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}
+
+.option-list__item {
+    &.is-selected {
+        background-color: #00b3ee;
+        color: #fff;
+    }
+}

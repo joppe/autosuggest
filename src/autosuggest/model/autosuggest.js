@@ -31,7 +31,13 @@ define(
                 var keyword = this.get('keyword');
 
                 if (keyword && this.get('minChars') <= keyword.length) {
-                    this.fetch();
+                    this.fetch({
+                        success: _.bind(function () {
+                            if (0 < this.get('options').length) {
+                                this.set('collapsed', false);
+                            }
+                        }, this)
+                    });
                 } else {
                     this.get('options').reset();
                 }

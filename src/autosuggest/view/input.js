@@ -34,19 +34,22 @@ define(
                 $body.on('click', _.bind(function () {
                     this.model.set('collapsed', true);
                 }, this));
+                this.$el.on('click', function (event) {
+                    event.stopPropagation();
+                });
 
                 this.listenTo(this.model, 'change:keyword', this.onKeywordChange);
                 this.listenTo(this.model, 'change:selectedOption', this.onSelectedOptionChange);
             },
 
-            blur: function () {
-                this.model.set('collapsed', true);
-            },
-
-            focus: function () {
+            onFocus: function () {
                 if (0 < this.model.get('options').length) {
                     this.model.set('collapsed', false);
                 }
+            },
+
+            onChange: function () {
+                this.model.set('keyword', this.getInputValue());
             },
 
             getInputValue: function () {
@@ -55,10 +58,6 @@ define(
 
             setInputValue: function (value) {
                 this.$el.val(value);
-            },
-
-            setKeyword: function () {
-                this.model.set('keyword', this.getInputValue());
             },
 
             onKeywordChange: function () {
