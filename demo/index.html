@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Demo</title>
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" data-main="js/main.js" src="../src/vendor/requirejs/require.js"></script>
+    <script src="vendor/es6-module-loader/dist/es6-module-loader.js"></script>
+    <script src="vendor/system.js/dist/system.js"></script>
+    <script src="js/system.conf.js"></script>
+    <script>
+        System.import('app/main');
+    </script>
 </head>
 <body>
     <form action="/" method="post">

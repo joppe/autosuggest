@@ -1,0 +1,25 @@
+{
+    "name": "autosuggest",
+    "private": true,
+    "version": "0.0.0",
+    "description": "Autosuggest javascript module",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --update --force -scss --no-cache demo/scss:demo/css",
+        "babel-demo": "node_modules/babel/bin/babel/index.js demo/es6 --stage 1 --out-dir demo/js --modules system",
+        "babel": "node_modules/babel/bin/babel/index.js src/es6 --stage 1 --out-dir demo/js/autosuggest --modules system",
+        "babel-watch": "node_modules/babel/bin/babel/index.js src/es6 --stage 1 --watch --out-dir demo/js/autosuggest --modules system"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/joppe/autosuggest.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/joppe/autosuggest/issues"
+    },
+    "dependencies": {
+        "babel": "^5.6.14"
+    }
+}

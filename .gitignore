@@ -1,2 +1,3 @@
 .idea/
-src/vendor/
+demo/vendor/
+css/*.css
